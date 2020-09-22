@@ -8,12 +8,12 @@
 
 int* add_elem(int set_num, int* set, int* num)
 {
-	printf("\nВведите новый элемент множества №%d: ", set_num);
+	printf("\nEnter new element of set №%d: ", set_num);
 	
 	set = (int*)realloc(set, sizeof(int) * (++ *num + 1));
 	scanf("%d", &set[*num]);
 
-	printf("\nНовое множество номер %d: {", set_num);
+	printf("\nNew set №%d: {", set_num);
 
 
 
@@ -30,7 +30,7 @@ int* add_elem(int set_num, int* set, int* num)
 
 int* delete_elem(int set_num, int* set, int* num)
 {
-	printf("\nКакой по номеру элемент множества №%d удалить? ", set_num);
+	printf("\nWhich element of the set №%d to remove ? ", set_num);
 	int del_num;
 	int* new_set = (int*)malloc(sizeof(int) * *num);
 	scanf("%d", &del_num);
@@ -45,7 +45,7 @@ int* delete_elem(int set_num, int* set, int* num)
 		new_set[i - 1] = set[i];
 	}
 
-	printf("\nНовое множество номер %d: {", set_num);
+	printf("\nNew set №%d: {", set_num);
 
 
 	--* num;
@@ -62,7 +62,7 @@ int* delete_elem(int set_num, int* set, int* num)
 
 int* get_set(int set_num, int* num)
 {
-	printf("Введите множество %d(пример {1,2,3}): {", set_num);
+	printf("Enter set №%d(пример {1,2,3}): {", set_num);
 	int* set = (int*)malloc(sizeof(int));
 	
 	
@@ -87,7 +87,7 @@ int* get_set(int set_num, int* num)
 			
 			if (set[i] == set[j + 1])
 			{
-				printf("\nМножество не соответствует требованиям: элементы №%d и №%d совпадают\n\nПовторите попытку\n\n", i + 1, j + 2);
+				printf("\nThe set does not meet the requirements: items №%d and №%d are the same\n\nTry again\n\n", i + 1, j + 2);
 				*num = 0;
 				system("pause");
 				system("cls");
@@ -102,7 +102,7 @@ int* get_set(int set_num, int* num)
 
 void print_set(int set_num, int* set, int num)
 {
-	printf("\nМножество номер %d: {", set_num);
+	printf("\nSet №%d: {", set_num);
 
 	
 
@@ -128,7 +128,7 @@ int main()
 	int* set2 = get_set(2, &num2);
 
 	int answ;
-	printf("0 - выход\n\n1 - добавить элемент\n\n2 - удалить элемент\n\n3 - вывод множеств\n\nВведите команду: ");
+	printf("0 - Exit\n\n1 - Add element\n\n2 - Delete element\n\n3 - Set output\n\nEnter the command: ");
 	scanf("%d", &answ);
 	while (answ)
 	{
@@ -137,7 +137,7 @@ int main()
 			int set_num;
 			system("pause");
 			system("cls");
-			printf("В какое множество добавить элемент? ");
+			printf("Which set should you add an element to? ");
 			scanf("%d", &set_num);
 			if (set_num == 1)
 			{
@@ -149,7 +149,7 @@ int main()
 			}
 			else
 			{
-				printf("\n\nТакого множества не существует");
+				printf("\n\nThere is no such set");
 			}
 		}
 		else if (answ == 2)
@@ -157,7 +157,7 @@ int main()
 			int set_num;
 			system("pause");
 			system("cls");
-			printf("Из какого множества удалить элемент? ");
+			printf("From which set to remove an element? ");
 			scanf("%d", &set_num);
 			if (set_num == 1)
 			{
@@ -169,7 +169,7 @@ int main()
 			}
 			else
 			{
-				printf("\n\nТакого множества не существует");
+				printf("\n\nThere is no such set");
 			}
 		}
 		else if (answ == 3)
@@ -179,12 +179,12 @@ int main()
 		}
 		else
 		{
-			printf("\n\nТакой команды не существует");
+			printf("\n\nThere is no such command");
 		}
 
 		system("pause");
 		system("cls");
-		printf("0 - выход\n\n1 - добавить элемент\n\n2 - удалить элемент\n\n3 - вывод множеств\n\nВведите команду: ");
+		printf("0 - Exit\n\n1 - Add element\n\n2 - Delete element\n\n3 - Set output\n\nEnter the command: ");
 		scanf("%d", &answ);
 	}
 
