@@ -62,7 +62,7 @@ int* delete_elem(int set_num, int* set, int* num)
 
 int* get_set(int set_num, int* num)
 {
-	printf("Enter set №%d(пример {1,2,3}): {", set_num);
+	printf("Enter set №%d(example {1,2,3}): {", set_num);
 	int* set = (int*)malloc(sizeof(int));
 	
 	
