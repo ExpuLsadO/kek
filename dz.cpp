@@ -8,12 +8,12 @@
 
 int* add_elem(int set_num, int* set, int* num)
 {
-	printf("\nEnter new element of set №%d: ", set_num);
+	printf("\nEnter new element of set number %d: ", set_num);
 	
 	set = (int*)realloc(set, sizeof(int) * (++ *num + 1));
 	scanf("%d", &set[*num]);
 
-	printf("\nNew set №%d: {", set_num);
+	printf("\nNew set number %d: {", set_num);
 
 
 
@@ -30,7 +30,7 @@ int* add_elem(int set_num, int* set, int* num)
 
 int* delete_elem(int set_num, int* set, int* num)
 {
-	printf("\nWhich element of the set №%d to remove ? ", set_num);
+	printf("\nWhich element of the set  number %d to remove ? ", set_num);
 	int del_num;
 	int* new_set = (int*)malloc(sizeof(int) * *num);
 	scanf("%d", &del_num);
@@ -45,7 +45,7 @@ int* delete_elem(int set_num, int* set, int* num)
 		new_set[i - 1] = set[i];
 	}
 
-	printf("\nNew set №%d: {", set_num);
+	printf("\nNew set  number %d: {", set_num);
 
 
 	--* num;
@@ -62,7 +62,7 @@ int* delete_elem(int set_num, int* set, int* num)
 
 int* get_set(int set_num, int* num)
 {
-	printf("Enter set №%d(example {1,2,3}): {", set_num);
+	printf("Enter set  number %d(example {1,2,3}): {", set_num);
 	int* set = (int*)malloc(sizeof(int));
 	
 	
@@ -87,7 +87,7 @@ int* get_set(int set_num, int* num)
 			
 			if (set[i] == set[j + 1])
 			{
-				printf("\nThe set does not meet the requirements: items №%d and №%d are the same\n\nTry again\n\n", i + 1, j + 2);
+				printf("\nThe set does not meet the requirements: items  number %d and  number %d are the same\n\nTry again\n\n", i + 1, j + 2);
 				*num = 0;
 				system("pause");
 				system("cls");
@@ -102,7 +102,7 @@ int* get_set(int set_num, int* num)
 
 void print_set(int set_num, int* set, int num)
 {
-	printf("\nSet №%d: {", set_num);
+	printf("\nSet  number %d: {", set_num);
 
 	
 
